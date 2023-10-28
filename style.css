@@ -75,7 +75,6 @@
     font-size: 0.875rem;
     color: var(--barva-seda-400);
     background-color: var(--barva-kremova-200);
-    margin: 1rem;
     margin: 150px auto;
     max-width: 600px;
   }
@@ -100,6 +99,16 @@
   @media (min-width: 600px) {
     .produkt {
         grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .produkt {
+        margin: 0px 15px;
+    }
+
+    body {
+      margin: 42px 0px;
     }
   }
 
