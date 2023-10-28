@@ -1,0 +1,159 @@
+:root {
+    --barva-zelena-400: hsl(158, 36%, 37%);
+    --barva-zelena-500: hsl(158, 36%, 20%);
+    --barva-kremova-200: hsl(30, 38%, 92%);
+
+    --barva-tmava-900: hsl(212, 21%, 14%);
+    --barva-seda-400: hsl(228, 12%, 48%);
+    --barva-bila-100: hsl(0, 0%, 100%);
+
+    --ff-roman: 'Fraunces', serif;
+    --ff-zaklad: 'Montserrat', sans-serif;
+
+    --fw-zaklad: 500;
+    --fw-bold: 520;
+}
+
+
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  h1 {
+    line-height: 1.1;
+  }
+
+  /* zakladni nastaveni */
+
+  body {
+    font-family:var(--ff-zaklad);
+    font-weight: var(--fw-zaklad);
+    font-size: 0.875rem;
+    color: var(--barva-seda-400);
+    background-color: var(--barva-kremova-200);
+    margin: 1rem;
+    margin: 150px auto;
+    max-width: 600px;
+  }
+
+  /* utility */
+  
+  .flex-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .produkt {
+    background-color: var(--barva-bila-100);
+    border-radius: 0.6rem;
+    overflow: hidden;
+    display: grid;
+    max-width: 600px;
+  }
+
+  @media (min-width: 600px) {
+    .produkt {
+        grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .produkt__content {
+    padding: 1.6rem;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .produkt__sekce {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.8rem;
+  }
+
+  .produkt__title {
+    font-size: 2rem;
+    font-family: var(--ff-roman);
+    color: var(--barva-tmava-900);
+  }
+
+  .produkt__sleva {
+    font-size: 2rem;
+    font-family: var(--ff-roman);
+    color: var(--barva-zelena-400)
+  }
+  
+  button {
+    cursor: pointer;
+    padding: 1em 1.5em;
+    border-radius: 0.6rem;
+    border: 0;
+    text-decoration: none;
+    display: inline-flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--barva-zelena-400);
+    color: var(--barva-bila-100);
+    font-weight: var(--fw-bold);
+    font-size: 0.85rem;
+  }
+
+  button[data-icon="shopping-cart"]::before {
+    content: "";
+    width: 15px;
+    height: 16px;
+    background-image: url("images/icon-cart.svg");
+
+  }
+
+  button:is(:hover, :focus) {
+    background-color: var(--barva-zelena-500);
+
+  }
+
+
